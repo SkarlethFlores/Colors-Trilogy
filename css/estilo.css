@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    /*color: #ef4135;*/
+}
+
+
+/* ------------ Header Inicial ---------------- */
+header{
+    /*width: 100%;*/
+    /*height: 50px;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*margin: 20px 0;*/
+    padding: 20px;
+    z-index: 1;
+
+    /*display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    */
+    display: block;
+}
+
+header h1{
+    /*background-color: rgba(196, 197, 198, 0.28);*/
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 10px;
+    /*width: 50%;*/
+}
+
+h1 a{
+    color: #ef4135;
+    /*font-size: 40px;*/
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+h1 span{  
+    color: #0050a4;
+    /*font-size: 40px;*/
+    font-weight: 400;
+    /*padding-left: 10px;*/
+}
+
+/* Biografia+ link */
+.biolabel{
+    position: relative;
+    color:#333;
+    top: 0px;
+    left: 0px;
+    text-decoration: underline;
+}
+
+
+
+
+/* ------------ Header Tipo 2 ---------------- */
+header.tipo2{
+    position: static;
+    display: flex;  
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    align-items: center; 
+}
+
+
+/* Using it?????  NOO */
+span a{
+    color: rgb(63, 62, 62);
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+
+
+
+/*------------- Navegacion --------------*/
+
+nav{
+    width: 400px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    background-color: rgba(251, 253, 254, 0);
+    justify-content: space-evenly;
+}
+
+ul li{
+    font-size: 1.2em;
+}
+
+nav a{
+    color: #030000;
+}
+
+.rojo nav a,
+.azul nav a{
+    color: white;
+}
+
+
+
+/*--------- Body & Backgrounds---------*/
+
+body{
+    /*  --- Si uso esto no me deja poner linear-gradient ???????
+    position: absolute; 
+    top: 0;
+    left: 0;
+    */
+    /*height: 100vh;
+    lo tacho para evvitar que el color 'linear-gradient' se seccione. 
+    */
+    width: 100%; 
+    background-image: linear-gradient(to top, rgb(217, 218, 219), rgb(137, 141, 141));
+    min-width: 320px;
+}
+
+.contenedor{
+    display: block;
+    display: flex;
+    /*flex-direction: column;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond;
+}
+
+.contenedor div {
+    height: 100vh;
+    width: 100%;
+}
+
+.biografia{ 
+    background-image: linear-gradient(to top, #999, #eee); 
+}
+
+.azul{ 
+    background-image: linear-gradient(to top, rgb(0, 54, 112), rgb(0, 80, 164));
+}
+
+.blanco{ 
+    background-image: linear-gradient(to top, rgb(153, 153, 153), rgb(238, 238, 238));
+}
+
+.rojo{ 
+    background-image: linear-gradient(to top, rgb(244, 2, 2), rgb(245, 63, 27));
+}
+
+
+
+
+
+/* ---------------------- Contenido */
+/* ---------------------- Pagina principal */
+.contenedor div{
+    height: 100vh;
+    width: calc(100% / 3);
+    text-align: end;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+
+    background-repeat: no-repeat;
+    background-size: 140% auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor a{
+    text-decoration: none;
+    font-size: 7em;
+}
+
+div.azul{
+    background-image: url("../img/azul.jpg");
+}
+div.azul a{
+    color: #0050a4;
+}
+div.blanco{
+    background-image: url("../img/blanco.jpg"); 
+}
+div.blanco a{
+    color: white;
+}
+div.rojo{
+    background-image: url("../img/rojo.jpg"); 
+}
+div.rojo a{ 
+    color: #ef4135;
+}
+
+
+
+
+/* ---------------------- Pagina Biografia */
+section.content{
+    /*---------
+    height: 100vh;
+    align-self: center;
+    background-image: linear-gradient(to top rgb(160, 159, 159)  rgb(212, 210, 210) );
+    */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 100px;
+    
+}
+
+.content div{
+    width: 500px;
+    margin: 0 auto; 
+}
+
+.content img{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px;
+    background-color: white;
+    width: calc(100% - 20px);
+}
+
+
+/* ---------------------- Paginas Colores */
+.content h2{
+    position: relative;
+    top: 100px;
+    left: -100px;
+    z-index: -1;
+    font-weight: 500;
+    font-size: 12em;
+}
+.content p{
+    margin-top: 10px;
+}
+
+/* ---------------------- Pagina Azul */
+
+.azul h2{
+    color: rgb(0, 54, 112);
+}
+
+.azul p{
+    color: white;
+}
+
+
+/* ---------------------- Pagina Blanco */
+
+.blanco h2{
+    color: white;
+}
+
+
+/* ---------------------- Pagina Rojo */
+
+.rojo h2{
+    color: #bd332a;
+}
+
+.rojo p{
+    color: #eee;
+}
+
+
+
+
+
+
+
+
+/* Punto de Corte */
+
+@media screen and (max-width:950px){
+
+    .contenedor{
+        display: block;
+        /*flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; */
+        background-color: blanchedalmond;
+    }
+
+    .contenedor div {
+         height: calc(33.33vh);
+         width: 100%;
+    }
+
+    div.azul{
+        background-position: center -50px;
+    }
+    div.rojo{
+        background-position: center -90px;
+    }
+
+    header.tipo2{
+        display: block;
+        width: 550px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+    .content h2{
+        position: static;  
+        font-size: 2em;
+        padding: 20px 0;
+    }
+
+    .content div{
+        width: 80%;
+        padding-bottom: 100px;
+    }
+}
+
